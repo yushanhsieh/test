@@ -1,6 +1,6 @@
 <?php
 //require_once 'PHPUnit/Autoload.php';
-require_once (dirname(dirname(__FILE__)) . DIRECTORY_SEPARATOR.'application'.DIRECTORY_SEPARATOR . 'NewClass.php');
+require_once ('NewClass.php');
 
 Class NewClassTest extends PHPUnit_Framework_TestCase
 {
