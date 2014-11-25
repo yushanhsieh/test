@@ -1,5 +1,5 @@
 <project name="PHPUnitTest">
- <exec executable="phpunit" failonerror="true">
+ <exec executable="/usr/local/bin/phpunit" failonerror="true">
   <arg line=" UnitTest NewClassTest.php" />
  </exec>
  <copy file="NewClass.php" tofile="builds/NewClass.php"/>
