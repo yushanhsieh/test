@@ -1,5 +1,5 @@
 <?php
-require '../../vendor/autoload.php';
+
 use GuzzleHttp\Client;
 class ProgrammerControllerTest extends PHPUnit_Framework_TestCase
 {
