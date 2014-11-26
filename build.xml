@@ -5,11 +5,4 @@
  <exec executable="/usr/local/bin/phpunit" failonerror="true">
   <arg line=" UnitTest APITest.php" />
  </exec>
- <exec dir="."
-      command="/usr/local/bin/phpunit --log-junit 'reports/unitreport.xml'
-                       --coverage-html 'reports/coverage'
-                       --coverage-clover 'reports/coverage/coverage.xml'
-                       test/"
-/>
- <copy file="NewClass.php" tofile="builds/NewClass.php"/>
 </project>
