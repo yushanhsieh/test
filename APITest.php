@@ -19,6 +19,7 @@ class ProgrammerControllerTest extends PHPUnit_Framework_TestCase
                 $body= $response->getBody();
                 $obj = json_decode($body);
                 $access_token = $obj->access_token;
+                $this->assertEquals(200,$response->getStatusCode());
 
                 //create  new history
                 $history = $url.'/history';
@@ -54,11 +55,13 @@ class ProgrammerControllerTest extends PHPUnit_Framework_TestCase
                 $body= $response->getBody();
                 $obj = json_decode($body);
                 $history_id = $obj->history_id;
+                $this->assertEquals(200,$response->getStatusCode());
 
                 //Get history
                 $response = $client->get($history.'/'.$history_id,[
                         'headers' => ['Authorization' => $access_token ]
                 ]);
+                $this->assertEquals(200,$response->getStatusCode());
 
                 //PUT Profile
                 $profile = $url.'/user';
@@ -70,10 +73,13 @@ class ProgrammerControllerTest extends PHPUnit_Framework_TestCase
                                 'name'=>$number
                         ]
                 ]);
+                $this->assertEquals(200,$response->getStatusCode());
 
                 //DELETE History
                 $response = $client->delete($history.'/'.$history_id,[
                         'headers' => ['Authorization' => $access_token ]
                 ]);
+                $this->assertEquals(200,$response->getStatusCode());
+
         }
 }
