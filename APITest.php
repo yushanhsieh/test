@@ -11,8 +11,8 @@ class ProgrammerControllerTest extends PHPUnit_Framework_TestCase
                 $login_url = $url.'/login';
                 $response = $client->post($login_url,[
                         'json'=> [
-                                'email' => 'susan_hsieh@wistron.com',
-                                'password' =>'24743592be8c93ee57aa017dcb5d73a2'
+                                'email' => 'admin@gmail.com',
+                                'password' =>'bf1241c04dfaaa6739c8300aea19e620'
                                 ]
                 ]);
 
@@ -63,7 +63,7 @@ class ProgrammerControllerTest extends PHPUnit_Framework_TestCase
                 //PUT Profile
                 $profile = $url.'/user';
                 $number = rand(1,1000);
-                $response = $client->put($profile.'/2',[
+                $response = $client->put($profile.'/1',[
                         'headers' => ['Authorization' => $access_token ]
                 ,
                         'json'=> [
