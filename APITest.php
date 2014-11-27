@@ -9,7 +9,12 @@ class ProgrammerControllerTest extends PHPUnit_Framework_TestCase
                 $client = new GuzzleHttp\Client();
                 $url = 'http://10.35.45.21/runningpal-server/api/v2';
                 $login_url = $url.'/login';
-                $response = $client->post($login_url,['json'=> ['email' => 'susan_hsieh@wistron.com','password' =>'24743592be8c93ee57aa017dcb5d73a2']]);
+                $response = $client->post($login_url,[
+                        'json'=> [
+                                'email' => 'susan_hsieh@wistron.com',
+                                'password' =>'24743592be8c93ee57aa017dcb5d73a2'
+                                ]
+                ]);
 
                 $body= $response->getBody();
                 $obj = json_decode($body);
