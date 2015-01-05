@@ -111,6 +111,7 @@ POST /devices
 }
 ```
 Parameter content type:`applicaion/json`
+
 ####Response
 ```
 {
