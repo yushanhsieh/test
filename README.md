@@ -72,6 +72,7 @@ Create a new device
 ```
 POST /devices
 ```
+
 ####Parameters
 ```
 {
