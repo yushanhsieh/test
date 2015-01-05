@@ -1,6 +1,6 @@
 #API Document Spec
 ***********
-{:toc}
+[toc]
 ***********
 ##Update History
 
